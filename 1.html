@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil Alvin</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background-color: rgba(80, 110, 150, 0.9); /* abu-abu kebiruan */
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 400px;
+      animation: fadeInCard 2s ease;
+    }
+
+    @keyframes fadeInCard {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .card p {
+      font-size: 18px;
+      color: #ffffff;
+      margin: 10px 0;
+    }
+
+    .card button {
+      display: block;
+      width: 100%;
+      margin-top: 15px;
+      padding: 12px 28px;
+      font-size: 16px;
+      color: white;
+      background: linear-gradient(to right, #8e24aa, #d81b60);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <video autoplay muted loop class="video-bg">
+    <source src="292827.mp4" type="video/mp4">
+    Browser kamu tidak mendukung video tag.
+  </video>
+
+  <div class="content">
+    <div class="card">
+      <p><strong>Nama:</strong> Alvin</p>
+      <button onclick="goToTikTok()">🔗 Lihat TikTok</button>
+      <button onclick="goToWhatsApp()">💬 Chat WhatsApp</button>
+    </div>
+  </div>
+
+  <script>
+    function goToTikTok() {
+      window.open("https://www.tiktok.com/@me.flee?is_from_webapp=1&sender_device=pc", "_blank");
+    }
+
+    function goToWhatsApp() {
+      window.open("https://wa.me/6285788124688", "_blank");
+    }
+  </script>
+
+</body>
+</html>
